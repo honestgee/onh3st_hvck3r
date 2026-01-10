@@ -6,14 +6,14 @@
     <title>Dev Hub | Online</title>
     <style>
         body { background-color: #0d1117; color: #c9d1d9; font-family: 'Courier New', Courier, monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
-        .container { border: 1px solid #30363d; padding: 40px; border-radius: 10px; background: #161b22; box-shadow: 0 8px 24px rgba(0,0,0,0.8); text-align: left; width: 80%; max-width: 600px; position: relative; }
+        .container { border: 1px solid #30363d; padding: 40px; border-radius: 10px; background: #161b22; box-shadow: 0 8px 24px rgba(0,0,0,0.8); text-align: left; width: 80%; max-width: 600px; }
         .header { color: #58a6ff; font-weight: bold; border-bottom: 1px solid #30363d; margin-bottom: 20px; padding-bottom: 10px; display: flex; justify-content: space-between; }
-        .terminal-text { line-height: 1.6; }
+        .terminal-text { line-height: 1.6; min-height: 150px; }
         .cursor { display: inline-block; width: 10px; height: 18px; background-color: #238636; animation: blink 1s infinite; vertical-align: middle; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
-        .btn { display: inline-block; margin-top: 30px; padding: 10px 20px; background-color: #238636; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; opacity: 0; }
-        .btn.visible { opacity: 1; }
-        .btn:hover { background-color: #2ea043; box-shadow: 0 0 10px #238636; }
+        .btn-group { margin-top: 20px; display: none; }
+        .btn { display: inline-block; padding: 8px 15px; background-color: #21262d; color: #58a6ff; text-decoration: none; border: 1px solid #30363d; border-radius: 6px; font-size: 14px; margin-right: 10px; }
+        .btn:hover { background-color: #30363d; }
     </style>
 </head>
 <body>
@@ -23,27 +23,28 @@
             <span style="color: #f85149;">● ONLINE</span>
         </div>
         <div class="terminal-text" id="typewriter"></div>
-        <a href="https://github.com/honestgee" class="btn" id="github-btn">ACCESS DATABASE</a>
+        <div class="btn-group" id="controls">
+            <a href="#" class="btn" onclick="alert('Viewing Logs...')">VIEW LOGS</a>
+            <a href="#" class="btn" onclick="alert('Scripts: monitor.py is running')">SCRIPTS</a>
+            <a href="https://github.com/honestgee" class="btn">GITHUB</a>
+        </div>
     </div>
     <script>
         const textElement = document.getElementById('typewriter');
-        const btn = document.getElementById('github-btn');
+        const controls = document.getElementById('controls');
         const lines = [
             "> INITIALIZING SYSTEM...",
             "> LOADING CORE MODULES...",
-            "> PYTHON SCRIPTS: ACTIVE (monitor.py)",
-            "> GITHUB PAGES: CONNECTED",
+            "> PYTHON SCRIPTS: ACTIVE",
             "> STATUS: SYSTEM OPERATIONAL",
             "> WELCOME, HONESTGEE."
         ];
-        let lineIndex = 0;
-        let charIndex = 0;
+        let lineIndex = 0; let charIndex = 0;
         function type() {
             if (lineIndex < lines.length) {
                 if (charIndex < lines[lineIndex].length) {
                     if (charIndex === 0) {
                         const newLine = document.createElement('div');
-                        newLine.style.color = lines[lineIndex].includes('OPERATIONAL') ? '#238636' : '#c9d1d9';
                         newLine.id = 'line-' + lineIndex;
                         textElement.appendChild(newLine);
                     }
@@ -51,15 +52,14 @@
                     charIndex++;
                     setTimeout(type, 40);
                 } else {
-                    lineIndex++;
-                    charIndex = 0;
+                    lineIndex++; charIndex = 0;
                     setTimeout(type, 500);
                 }
             } else {
                 const cursor = document.createElement('span');
                 cursor.className = 'cursor';
                 textElement.appendChild(cursor);
-                btn.classList.add('visible');
+                controls.style.display = 'block';
             }
         }
         window.onload = type;
