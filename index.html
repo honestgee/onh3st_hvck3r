@@ -25,7 +25,6 @@
         <div class="terminal-text" id="typewriter"></div>
         <a href="https://github.com/honestgee" class="btn" id="github-btn">ACCESS DATABASE</a>
     </div>
-
     <script>
         const textElement = document.getElementById('typewriter');
         const btn = document.getElementById('github-btn');
@@ -37,10 +36,8 @@
             "> STATUS: SYSTEM OPERATIONAL",
             "> WELCOME, HONESTGEE."
         ];
-
         let lineIndex = 0;
         let charIndex = 0;
-
         function type() {
             if (lineIndex < lines.length) {
                 if (charIndex < lines[lineIndex].length) {
@@ -65,9 +62,7 @@
                 btn.classList.add('visible');
             }
         }
-
         window.onload = type;
     </script>
 </body>
 </html>
-
