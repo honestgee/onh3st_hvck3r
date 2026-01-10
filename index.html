@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Hub | Online</title>
     <style>
-        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
-        .container { border: 1px solid #30363d; padding: 40px; border-radius: 10px; background: #161b22; box-shadow: 0 8px 24px rgba(0,0,0,0.5); text-align: center; max-width: 500px; width: 100%; }
-        h1 { color: #58a6ff; margin-bottom: 10px; }
-        .status { color: #238636; font-family: monospace; margin: 5px 0; }
-        .news-box { margin-top: 25px; padding: 15px; border: 1px dashed #30363d; border-radius: 8px; background: #0d1117; text-align: left; }
-        .news-title { color: #f85149; font-weight: bold; font-size: 0.9em; text-transform: uppercase; }
-        .btn { display: inline-block; margin-top: 25px; padding: 10px 20px; background-color: #21262d; color: #c9d1d9; text-decoration: none; border: 1px solid #f0f6fc1a; border-radius: 6px; }
-        .btn:hover { background-color: #30363d; border-color: #8b949e; }
+        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .header-panel { width: 100%; max-width: 800px; border: 1px solid #30363d; background: #161b22; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px; }
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; max-width: 800px; }
+        .card { border: 1px solid #30363d; background: #161b22; padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+        h1, h2 { color: #58a6ff; margin-top: 0; }
+        .status-on { color: #238636; font-weight: bold; }
+        .rugby-news { border-left: 4px solid #f85149; padding-left: 10px; font-size: 0.9em; }
+        .meme-zone { border-left: 4px solid #a371f7; padding-left: 10px; font-size: 0.9em; }
+        .btn { display: block; margin-top: 15px; padding: 10px; background-color: #21262d; color: #c9d1d9; text-decoration: none; border: 1px solid #30363d; border-radius: 6px; text-align: center; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header-panel">
         <h1>SYSTEM OPERATIONAL</h1>
-        <p class="status">> Python scripts: Active (monitor.py)</p>
-        <p class="status">> Status: Live on GitHub Pages</p>
-        
-        <div class="news-box">
-            <div class="news-title">Latest World Rugby News</div>
-            <p style="font-size: 0.95em; line-height: 1.4;">Updates on global rankings, match schedules, and tournament highlights have been integrated into the system database.</p>
+        <p class="status-on">> SESSION ACTIVE: HONESTGEE</p>
+    </div>
+
+    <div class="main-grid">
+        <div class="card">
+            <h2>World Rugby News</h2>
+            <div class="rugby-news">
+                <p>Latest updates on the global circuit and tournament standings are now live.</p>
+            </div>
+            <a href="#" class="btn">Read Full Report</a>
         </div>
 
-        <a href="https://github.com/honestgee" class="btn">View GitHub Profile</a>
+        <div class="card">
+            <h2>Meme Factory</h2>
+            <div class="meme-zone">
+                <p>Website integration for meme creation and sharing is ready for deployment.</p>
+            </div>
+            <a href="#" class="btn">Open Meme Lab</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a href="https://github.com/honestgee" class="btn">BACK TO GITHUB PROFILE</a>
     </div>
 </body>
 </html>
