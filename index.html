@@ -3,45 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Hub | Online</title>
+    
+    <title>onh3st_hvck3r | Global News & Sports History Portal</title>
+    <meta name="description" content="Official onh3st_hvck3r portal featuring global news, World Rugby history, and professional tech updates. Managed by honestgee.">
+    <meta name="keywords" content="onh3st_hvck3r, honestgee, news portal, rugby history, world news, technology blog">
+    <meta name="author" content="honestgee">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="onh3st_hvck3r | News Portal">
+    <meta property="og:description" content="Explore global news and the history of the game on the official onh3st_hvck3r portal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://honestgee.github.io/onh3st_hvck3r/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .header-panel { width: 100%; max-width: 800px; border: 1px solid #30363d; background: #161b22; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 20px; }
-        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; max-width: 800px; }
-        .card { border: 1px solid #30363d; background: #161b22; padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
-        h1, h2 { color: #58a6ff; margin-top: 0; }
-        .status-on { color: #238636; font-weight: bold; }
-        .rugby-news { border-left: 4px solid #f85149; padding-left: 10px; font-size: 0.9em; }
-        .meme-zone { border-left: 4px solid #a371f7; padding-left: 10px; font-size: 0.9em; }
-        .btn { display: block; margin-top: 15px; padding: 10px; background-color: #21262d; color: #c9d1d9; text-decoration: none; border: 1px solid #30363d; border-radius: 6px; text-align: center; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #f4f7fe; color: #2d3748; }
+        .ticker { background: #1a202c; color: #fff; padding: 10px; font-size: 0.85rem; overflow: hidden; white-space: nowrap; position: relative; }
+        .ticker-wrap { display: inline-block; animation: ticker 30s linear infinite; }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .navbar { background: #fff; padding: 1rem 2rem; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: #4a5568; letter-spacing: -1px; }
+        .logo span { color: #3182ce; }
+        .container { max-width: 1200px; margin: 2rem auto; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; padding: 0 1rem; }
+        .article-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+        .article-img { height: 350px; background: #cbd5e0; background-image: url('https://www.world.rugby/dms-static/60f7793d-685b-4229-875c-897746408273.jpg'); background-size: cover; background-position: center; }
+        .article-content { padding: 2.3rem; }
+        .subheading { color: #3182ce; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+        .sidebar-card { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .contact-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #4a5568; margin-bottom: 15px; font-size: 0.95rem; transition: 0.2s; }
+        .contact-link:hover { color: #3182ce; }
+        .email-btn { background: #f4f7fe; padding: 5px 10px; border-radius: 5px; cursor: pointer; border: 1px dashed #3182ce; color: #3182ce; font-size: 0.8rem; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div class="header-panel">
-        <h1>SYSTEM OPERATIONAL</h1>
-        <p class="status-on">> SESSION ACTIVE: HONESTGEE</p>
-    </div>
 
-    <div class="main-grid">
-        <div class="card">
-            <h2>World Rugby News</h2>
-            <div class="rugby-news">
-                <p>Latest updates on the global circuit and tournament standings are now live.</p>
-            </div>
-            <a href="#" class="btn">Read Full Report</a>
-        </div>
-
-        <div class="card">
-            <h2>Meme Factory</h2>
-            <div class="meme-zone">
-                <p>Website integration for meme creation and sharing is ready for deployment.</p>
-            </div>
-            <a href="#" class="btn">Open Meme Lab</a>
+    <div class="ticker">
+        <div class="ticker-wrap">
+            <b>WORLD UPDATE:</b> Explore the rich history of the game | <b>CONTACT:</b> Automated away messages active | <b>NEWS:</b> New sports section initialized.
         </div>
     </div>
 
-    <div style="margin-top: 20px;">
-        <a href="https://github.com/honestgee" class="btn">BACK TO GITHUB PROFILE</a>
+    <nav class="navbar">
+        <div class="logo">ONH3ST<span>_NEWS</span></div>
+        <div style="font-size: 0.9rem; font-weight: 600; color: #718096;"><i class="fa fa-user-shield"></i> honestgee</div>
+    </nav>
+
+    <div class="container">
+        <div class="main-news">
+            <div class="article-card">
+                <div class="article-img"></div>
+                <div class="article-content">
+                    <span class="subheading">World Rugby History</span>
+                    <h2 style="font-size: 2.2rem; margin: 0 0 20px 0;">The Origins of the Game: A Global Legacy</h2>
+                    <p style="color: #4a5568; margin-bottom: 1.5rem; line-height: 1.7;">From the schoolyards of Rugby to a worldwide phenomenon, discover the history that shaped the sport.</p>
+                    <a href="news/rugby-history.html" style="background: #3182ce; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">View Archives</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <span style="font-weight: 700; margin-bottom: 1.2rem; display: block; border-left: 4px solid #3182ce; padding-left: 10px;">Contact Support</span>
+                
+                <div class="contact-link">
+                    <i class="fab fa-google" style="color: #ea4335;"></i>
+                    <span id="email-box">
+                        <span class="email-btn" onclick="revealEmail()">Click to reveal email</span>
+                    </span>
+                </div>
+
+                <a href="https://wa.me/254707486020?text=Hello%20thanks%20for%20reaching%20us%20we%20will%20back%20as%20soon%20as%20possible%2Cthanks%20%F0%9F%A4%97" class="contact-link">
+                    <i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp Admin
+                </a>
+                
+                <a href="https://www.facebook.com/profile.php?id=61582777286468" target="_blank" class="contact-link">
+                    <i class="fab fa-facebook" style="color: #1877f2;"></i> Facebook Profile
+                </a>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function revealEmail() {
+            const email = "honestg521" + "@" + "gmail.com";
+            document.getElementById('email-box').innerHTML = '<a href="mailto:' + email + '" style="text-decoration:none; color:#4a5568;">' + email + '</a>';
+        }
+    </script>
+
 </body>
 </html>
